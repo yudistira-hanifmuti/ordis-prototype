@@ -8,6 +8,8 @@ import (
 
 	"app/ordis-prototype/config"
 	"app/ordis-prototype/modules"
+
+	log "github.com/sirupsen/logrus"
 )
 
 //configuration
@@ -15,6 +17,9 @@ var configFile = "base"
 var baseConfig config.BaseConfiguration
 
 const configDir = "/home/nakama/Documents/go/src/app/ordis/"
+
+//logger
+var logger = log.New()
 
 func init() {
 
@@ -32,25 +37,23 @@ func init() {
 		os.Exit(-3)
 	}
 
+	//setup logger
+	logFile := baseConfig.LogPath + "ordis-module.log"
+	file, err = os.OpenFile(logFile, os.O_APPEND|os.O_WRONLY, 0666)
+	if err != nil {
+		fmt.Println("File logger not found. Creating log file.")
+		file, err = os.OpenFile(logFile, os.O_CREATE|os.O_WRONLY, 0666)
+	}
+	logger.SetOutput(file)
+	logger.Info("File logger is initialized.")
+
 }
 
 func main() {
-	fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	fmt.Println("Preparing internal...")
-	fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	fmt.Println()
+	//initialize installed module
+	modules.ObjModuleManager = modules.NewModuleManager(logger, &baseConfig)
+	modules.ObjModuleManager.PrepareModule()
 
-	fmt.Println("\tCreating Module Manager object.")
-	manager := modules.NewModuleManager(&baseConfig)
-	modules.BaseConfiguration = &baseConfig
-	fmt.Println("\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	fmt.Println("\tPreparing modules...")
-	manager.PrepareModule()
-	fmt.Println("\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
-	fmt.Println("\tAll modules are ready.")
-	fmt.Println("\tStart fetching data. See log.")
-	fmt.Println("\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	sig := make(chan os.Signal)
 	signal.Notify(sig, os.Interrupt, os.Kill)
 	<-sig

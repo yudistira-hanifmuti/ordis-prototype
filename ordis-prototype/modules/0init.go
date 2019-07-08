@@ -8,6 +8,7 @@ import (
 var BaseConfiguration *config.BaseConfiguration
 
 //
+var ObjModuleManager *ModuleManager
 
 //Fetch variable to store module handlers
 var FetchHandlers map[string]interface{}

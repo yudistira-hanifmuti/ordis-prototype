@@ -1,0 +1,76 @@
+time="2019-07-08T13:08:27+07:00" level=info msg="File logger not found. Creating log file."
+time="2019-07-08T13:08:27+07:00" level=info msg="File logger initialized."
+[36mINFO[0m[0000] File logger initialized.                     
+time="2019-07-08T13:31:22+07:00" level=info msg="File logger initialized."
+time="2019-07-08T13:31:22+07:00" level=info
+time="2019-07-08T13:31:22+07:00" level=info msg="ModuleManager is initialized."
+time="2019-07-08T13:42:44+07:00" level=info msg="File logger initialized."
+time="2019-07-08T13:42:44+07:00" level=info msg="ModuleManager is initialized."
+time="2019-07-08T14:40:38+07:00" level=info msg="File logger initialized."
+time="2019-07-08T14:40:38+07:00" level=info msg="ModuleManager is initialized." Context=ordis/modules/modules.go
+time="2019-07-08T14:40:38+07:00" level=info msg="Preparing modules." Context=ordis/modules/modules.go
+time="2019-07-08T14:40:38+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=hammerfluxhome
+time="2019-07-08T14:40:38+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=hammerfluxplay
+time="2019-07-08T14:40:38+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=regressiontest
+time="2019-07-08T14:41:38+07:00" level=info msg="2019-07-08 07:41:38.000210473 +0000 UTCappended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:42:50+07:00" level=info msg="File logger initialized."
+time="2019-07-08T14:42:50+07:00" level=info msg="ModuleManager is initialized." Context=ordis/modules/modules.go
+time="2019-07-08T14:42:50+07:00" level=info msg="Preparing modules." Context=ordis/modules/modules.go
+time="2019-07-08T14:42:50+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=hammerfluxhome
+time="2019-07-08T14:42:50+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=hammerfluxplay
+time="2019-07-08T14:42:50+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=regressiontest
+time="2019-07-08T14:43:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:43:50+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:43:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:44:50+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:44:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:44:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:45:50+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:45:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:45:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:46:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:46:50+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:46:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:47:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:47:50+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:47:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:48:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:48:50+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:48:50+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:49:41+07:00" level=info msg="File logger initialized."
+time="2019-07-08T14:49:41+07:00" level=info msg="ModuleManager is initialized." Context=ordis/modules/modules.go
+time="2019-07-08T14:49:41+07:00" level=info msg="Preparing modules." Context=ordis/modules/modules.go
+time="2019-07-08T14:49:41+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=hammerfluxhome
+time="2019-07-08T14:49:41+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=hammerfluxplay
+time="2019-07-08T14:49:41+07:00" level=info msg="Adding fetch schedule." Context=ordis/modules/modules.go ModuleName=regressiontest
+time="2019-07-08T14:49:41+07:00" level=info msg="All 4 modules are ready." Context=ordis/modules/modules.go
+time="2019-07-08T14:50:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:50:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:50:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:51:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:51:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:51:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:52:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:52:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:52:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:53:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:53:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:53:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:54:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:54:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:54:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:55:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:55:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:55:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:56:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:56:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:56:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:57:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:57:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:57:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:58:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:58:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"
+time="2019-07-08T14:58:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:59:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxplay.go Event="Fetching Handling"
+time="2019-07-08T14:59:41+07:00" level=info msg="appended some data" Context=ordis/modules/regressiontest.go Event="Fetching Handling"
+time="2019-07-08T14:59:41+07:00" level=info msg="appended some data" Context=ordis/modules/hammerfluxhome.go Event="Fetching Handling"

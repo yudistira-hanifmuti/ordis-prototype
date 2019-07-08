@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/sirupsen/logrus"
+
 	"app/ordis-prototype/config"
 
 	"github.com/robfig/cron"
@@ -13,27 +15,43 @@ import (
 type ModuleManager struct {
 	BaseConfig *config.BaseConfiguration
 	Cron       *cron.Cron
+	Logger     *logrus.Logger
 }
 
-func NewModuleManager(conf *config.BaseConfiguration) *ModuleManager {
-	fmt.Println("\tCreating new cron object.")
+func NewModuleManager(log *logrus.Logger, conf *config.BaseConfiguration) *ModuleManager {
+	log.WithFields(logrus.Fields{
+		"Context": "ordis/modules/modules.go",
+	}).Info("ModuleManager is initialized.")
 	moduleCron := cron.New()
-	manager := &ModuleManager{conf, moduleCron}
+	manager := &ModuleManager{conf, moduleCron, log}
 	return manager
 }
 
 func (thisObject *ModuleManager) PrepareModule() {
+
+	logEntry := thisObject.Logger.WithFields(logrus.Fields{
+		"Context": "ordis/modules/modules.go",
+	})
+	logEntry.Info("Preparing modules.")
+
 	//retrieve installed modules
 	modules := thisObject.BaseConfig.InstalledModules
 
 	//Add fetching to cron
 	for _, module := range modules {
-		fmt.Printf("\t\t~~~ Start adding %s fetch schedule\n", module)
+		thisObject.Logger.WithFields(logrus.Fields{
+			"Context":    "ordis/modules/modules.go",
+			"ModuleName": module,
+		}).Info("Adding fetch schedule.")
 		var jobFunc = FetchHandlers[module]
 		thisObject.Cron.AddFunc("@every 1m", func() {
 			jobFunc.(func())()
 		})
 	}
+	successMsg := fmt.Sprintf("All %d modules are ready.", cap(modules))
+	fmt.Println(successMsg)
+	fmt.Println("Data fetching has started. Please see the log file.")
+	logEntry.Info(successMsg)
 
 	go thisObject.Cron.Start()
 }
@@ -41,7 +59,7 @@ func (thisObject *ModuleManager) PrepareModule() {
 func (thisObject *ModuleManager) getModuleConfiguration(moduleName string) *config.ModuleConfiguration {
 	var moduleConfig *config.ModuleConfiguration
 	//retrieve config directory
-	configDir := thisObject.BaseConfig.ConfigDir + "modules/"
+	configDir := thisObject.BaseConfig.ConfigPath + "modules/"
 
 	//read base configuration file
 	file, err := os.Open(configDir + moduleName + ".json")
@@ -58,16 +76,4 @@ func (thisObject *ModuleManager) getModuleConfiguration(moduleName string) *conf
 	}
 
 	return moduleConfig
-}
-
-func ScanModules(modules []string) {
-	fmt.Println("~~~ Start assigning schedule ~~~")
-	fmt.Println()
-	for _, module := range modules {
-		fmt.Printf("~~~ Start adding %s fetch schedule\n", module)
-		//do something
-		fmt.Printf("~~~ Start adding %s predict schedule\n", module)
-		//do something
-
-	}
 }

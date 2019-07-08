@@ -4,5 +4,6 @@
         "hammerfluxplay",
         "regressiontest"
     ],
-    "ConfigDir": "/home/nakama/Documents/go/src/app/ordis/"
+    "ConfigPath": "/home/nakama/Documents/go/src/app/ordis/",
+    "LogPath": "/home/nakama/Documents/go/src/app/ordis/log/"
 }
