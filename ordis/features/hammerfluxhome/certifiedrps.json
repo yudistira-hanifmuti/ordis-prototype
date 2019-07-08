@@ -1,0 +1,11 @@
+{
+    "InternalDataLocation": "modules/hammerfluxhome/last10",
+    
+    "//": "File to execute fetch data.",
+    "FetcherExecutable": "go",
+    "FetcherFilename": "fetch.go",
+
+    "//": "File to execute transformation.",
+    "TransformExecutable": "python",
+    "TransformFilename": "transform_certifiedrps.py"
+}

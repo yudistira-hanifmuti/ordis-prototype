@@ -1,0 +1,9 @@
+{
+    "FeatureFolderLocation": "features/hammerfluxhome",
+    "Features": [
+        "last10",
+        "certifiedrps"
+    ],
+    "PredictionExecutable": "python",
+    "PredictionFilename": "prediction.py"
+}

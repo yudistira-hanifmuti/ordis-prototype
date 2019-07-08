@@ -1,0 +1,8 @@
+{
+    "InstalledModules": [
+        "hammerfluxhome",
+        "hammerfluxplay",
+        "regressiontest"
+    ],
+    "ConfigDir": "/home/nakama/Documents/go/src/app/ordis/"
+}

@@ -1,0 +1,8 @@
+{
+    "FeatureFolderLocation": "features/regressiontest",
+    "Features": [
+        "last10"
+    ],
+    "PredictionExecutable": "python",
+    "PredictionFilename": "prediction.py"
+}
