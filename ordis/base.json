@@ -2,7 +2,8 @@
     "InstalledModules": [
         "hammerfluxhome",
         "hammerfluxplay",
-        "regressiontest"
+        "regressiontest",
+        "jenkins"
     ],
     "ConfigPath": "/home/nakama/Documents/go/src/app/ordis/",
     "LogPath": "/home/nakama/Documents/go/src/app/ordis/log/"

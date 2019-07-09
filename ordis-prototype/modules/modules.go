@@ -5,11 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sirupsen/logrus"
-
 	"app/ordis-prototype/config"
 
 	"github.com/robfig/cron"
+	"github.com/sirupsen/logrus"
 )
 
 type ModuleManager struct {
@@ -22,6 +21,7 @@ func NewModuleManager(log *logrus.Logger, conf *config.BaseConfiguration) *Modul
 	log.WithFields(logrus.Fields{
 		"Context": "ordis/modules/modules.go",
 	}).Info("ModuleManager is initialized.")
+
 	moduleCron := cron.New()
 	manager := &ModuleManager{conf, moduleCron, log}
 	return manager
@@ -43,10 +43,18 @@ func (thisObject *ModuleManager) PrepareModule() {
 			"Context":    "ordis/modules/modules.go",
 			"ModuleName": module,
 		}).Info("Adding fetch schedule.")
-		var jobFunc = FetchHandlers[module]
-		thisObject.Cron.AddFunc("@every 1m", func() {
-			jobFunc.(func())()
-		})
+
+		if jobFunc, ok := FetchHandlers[module]; ok {
+			thisObject.Cron.AddFunc("@every 1m", func() {
+				jobFunc.(func())()
+			})
+		} else {
+			fmt.Println("WARN No handler is assigned. See logs.")
+			thisObject.Logger.WithFields(logrus.Fields{
+				"Context":    "Fetch Handler",
+				"ModuleName": module,
+			}).Warn("No handler is assigned.")
+		}
 	}
 	successMsg := fmt.Sprintf("All %d modules are ready.", cap(modules))
 	fmt.Println(successMsg)
